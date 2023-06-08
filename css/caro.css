@@ -7,7 +7,7 @@ ol{
 }
 main{
     align-items: center;
-    z-index: 2;
+    padding-top: 30px;
 }
 
 section{
@@ -16,12 +16,16 @@ section{
 header h1{
     display: flex;
     align-items: center;
-    background-color: pink;
+    background-color: #9100ff;
     justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
 }
+
 #start-game{
-    
-    width: 25%;
+    margin-top: 20px;
+    width: 200px;
 }
 #active-game{
     display: flex;
@@ -58,15 +62,22 @@ header h1{
     cursor: pointer;
 }  
 #caro-board li:hover{
-    background-color: red;
+    background-color: #9100ff;
 }
 .player{
     width: 400px;
-   
+   height: 280px;
     align-items: center;
     justify-content: center;
-    background-color: #f0dffd;
+    background-color: #f6ddff;
 }
 .container-fluid{
-    background-color: violet;
+    background-color: #faeaf7;
+}
+.btn1{
+    background-color: #f6ddff;
+    border: none;
+}
+.btn1:hover{
+    background-color: #9100ff;
 }

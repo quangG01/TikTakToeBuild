@@ -1,14 +1,13 @@
-var player1 = document.querySelector("#player-name1").value;
-var player2 = document.querySelector("#player-name2").value;
+var player = document.querySelector("#player-name").value;
+var closePlayer = document.getElementById("closePlayerName");
 
+const formElement  = document.querySelector("form");
 
-
-var btnSavePlayerName1 = document.querySelector("#savePlayerName1");
-var btnSavePlayerName2 = document.querySelector("#savePlayerName2");
+var errorOutput = document.getElementById("nhapLai");
 
 var btnStartGame = document.querySelector("#start-game");
 var PlayCaro = document.querySelector("#active-game");
 
 
-btnSavePlayerName1.addEventListener("click",saveName1);
-btnSavePlayerName2.addEventListener("click",saveName2);
+formElement.addEventListener("submit",savePlayer);
+closePlayer.addEventListener("click",closeForm)
