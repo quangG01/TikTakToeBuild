@@ -28,11 +28,12 @@ header h1{
     width: 200px;
 }
 #active-game{
-    display: flex;
+    
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 0;
+    display: none;
 }
 #caro-board{
 

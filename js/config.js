@@ -19,7 +19,7 @@ function openForm(event){
 
 function closeForm(){
     errorOutput.innerHTML= "";
-    // document.getElementById("player-name").value = ""; 
+    document.getElementById("player-name").value = ""; 
 }
 function savePlayer(event){
     event.preventDefault();
@@ -32,6 +32,19 @@ function savePlayer(event){
     }
     var UpdateName = document.getElementById("edited-" + editedPlayer );
     console.log(UpdateName);
-    // var ChangeName = document.getElementById("player-" + editedPlayer).innerHTML = enterPlayerName;
-    UpdateName.children[1].innerHTML = enterPlayerName;
+     const ChangeName = document.getElementById("player-" + editedPlayer).innerHTML = enterPlayerName;
+    // UpdateName.children[1].innerHTML = enterPlayerName;
+    if(editedPlayer === 1)
+    {
+        players[0].name = enterPlayerName;
+        console.log(players[0].name)
+    }
+    else {
+        players[1].name = enterPlayerName;
+        console.log(players[1].name)
+    }
+}
+function openGame(){
+    playCaro.style.display = "flex";
+    console.log("123")
 }
