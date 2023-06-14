@@ -1,4 +1,4 @@
-function saveName1(event){
+function saveName(event){
     // event.preventDefault();
     // const data = new FormData(event.target)
     // const enterPlayerName = FormData.get("player-name");
@@ -12,8 +12,14 @@ function saveName1(event){
     // }
    
 }
+function openForm(event){
+    editedPlayer = +event.target.dataset.playerid;//string into int
+    console.log(editedPlayer);
+}
+
 function closeForm(){
     errorOutput.innerHTML= "";
+    // document.getElementById("player-name").value = ""; 
 }
 function savePlayer(event){
     event.preventDefault();
@@ -24,4 +30,8 @@ function savePlayer(event){
        errorOutput.innerHTML = "Input is not valid";
        return;
     }
+    var UpdateName = document.getElementById("edited-" + editedPlayer );
+    console.log(UpdateName);
+    // var ChangeName = document.getElementById("player-" + editedPlayer).innerHTML = enterPlayerName;
+    UpdateName.children[1].innerHTML = enterPlayerName;
 }
