@@ -42,9 +42,6 @@ function savePlayer(event){
     else {
         players[1].name = enterPlayerName;
         console.log(players[1].name)
+    
     }
-}
-function openGame(){
-    playCaro.style.display = "flex";
-    console.log("123")
 }

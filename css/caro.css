@@ -65,6 +65,13 @@ header h1{
 #caro-board li:hover{
     background-color: #9100ff;
 }
+#caro-board li.disabled{
+    background-color: #9100ff;
+    color : white;
+    cursor: default;
+    font-size: 25px;
+    font-weight: 700;
+}
 .player{
     width: 400px;
    height: 280px;
