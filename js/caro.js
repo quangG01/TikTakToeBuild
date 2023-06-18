@@ -1,9 +1,12 @@
 function openGame(){
-    // if(players[0].name === "" || players[1].name === "" )
-    // {
-    //     alert("Nhap ten thi moi dc choi");
-    //     return;
-    // }
+    if(players[0].name === "" || players[1].name === "" )
+    {
+        alert("Nhap ten thi moi dc choi");
+        return;
+    }
+
+    startNewGame();
+
     playCaro.style.display = "flex";
     activePlayerName.innerHTML = players[activePlayer].name;
  
@@ -18,7 +21,28 @@ function switchPlayer(){
     }
     activePlayerName.innerHTML = players[activePlayer].name;
 }
+function startNewGame(){
+    activePlayer = 0;
+    currentRound = 1;
+    gameOver = false;
+    let gameBoardIndex = 0;
+    appear.firstElementChild.innerHTML = 'Congrat <span id="winner-player">Player Name</span> You Win ';
+    appear.style.display = 'none';
+     
 
+
+    for (var i = 0 ;i <3 ;i++)
+    {
+        for (var j = 0; j<3;j++)
+        {
+            gameData[i][j] = 0;
+            gameBoard.children[gameBoardIndex].innerHTML = "";
+            gameBoard.children[gameBoardIndex].classList.remove("disabled")
+            gameBoardIndex++;
+        }
+    }
+
+}
 
 function selectGameBtn(event){
     const selectedField = event.target;
@@ -26,7 +50,7 @@ function selectGameBtn(event){
     var selectedRow = selectedField.dataset.row -1;
     var selectedCol = selectedField.dataset.col -1;
 
-    if(event.target.tagName !== "LI"){
+    if(event.target.tagName !== "LI" || gameOver == true){
         // console.log(event.target.tagName)
         return;
     }
@@ -94,6 +118,7 @@ function checkForWinning(){
     return 0;
 }
 function annouceWinner(winnerPlayer){
+    gameOver = true;
     appear.style.display = "block";
 
     if( winnerPlayer > 0){

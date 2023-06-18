@@ -3,8 +3,8 @@ var openPlayer2 = document.getElementById("btnPlayer2");
 
 var closePlayer = document.getElementById("closePlayerName");
 
- const gameBtns = document.querySelectorAll("ol li");
-// const gameBtns = document.getElementById("caro-board");
+const gameBtns = document.querySelectorAll("ol li");
+const gameBoard = document.getElementById("caro-board");
  
 const formElement  = document.querySelector("form");
 var errorOutput = document.getElementById("nhapLai");
