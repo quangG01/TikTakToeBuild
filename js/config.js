@@ -14,7 +14,7 @@ function saveName(event){
 }
 function openForm(event){
     editedPlayer = +event.target.dataset.playerid;//string into int
-    console.log(editedPlayer);
+    // console.log(editedPlayer);
 }
 
 function closeForm(){
@@ -30,18 +30,17 @@ function savePlayer(event){
        errorOutput.innerHTML = "Input is not valid";
        return;
     }
-    var UpdateName = document.getElementById("edited-" + editedPlayer );
-    console.log(UpdateName);
-     const ChangeName = document.getElementById("player-" + editedPlayer).innerHTML = enterPlayerName;
-    // UpdateName.children[1].innerHTML = enterPlayerName;
+    // var UpdateName = document.getElementById("edited-" + editedPlayer );
+    // console.log(UpdateName);
+    const ChangeName = document.getElementById("player-" + editedPlayer).innerHTML = enterPlayerName;
     if(editedPlayer === 1)
     {
         players[0].name = enterPlayerName;
-        console.log(players[0].name)
+        // console.log(players[0].name)
     }
     else {
         players[1].name = enterPlayerName;
-        console.log(players[1].name)
-    
+        // console.log(players[1].name)
+     
     }
 }

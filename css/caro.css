@@ -68,7 +68,7 @@ header h1{
 #caro-board li.disabled{
     background-color: #9100ff;
     color : white;
-    cursor: default;
+    cursor: not-allowed;
     font-size: 25px;
     font-weight: 700;
 }
